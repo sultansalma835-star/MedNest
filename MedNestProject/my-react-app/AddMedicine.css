@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    background: #f4f7fb;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    
+  }
+  
+  .layout {
+    display: flex;
+  }
+  
+  /* ================= PAGE ================= */
+  
+  .add-medicine-container {
+    flex: 1;
+    margin-left: 100px;
+    padding: 25px;
+  }
+  
+  /* ================= HEADER ================= */
+  
+  .add-header {
+    margin-bottom: 20px;
+  }
+  
+  .add-header h1 {
+    font-size: 28px;
+    color: #1B3C74;
+    margin-bottom: 6px;
+  }
+  
+  .add-header h4 {
+    font-size: 20px;
+    color: #6b7a90;
+  }
+  
+  /* ================= CARD ================= */
+  
+  .form-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid #e6edf5;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* ================= GRID ================= */
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  
+  .full {
+    grid-column: 1 / -1;
+  }
+  
+  /* ================= INPUTS ================= */
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1B3C74;
+    margin-bottom: 6px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 11px;
+    border-radius: 10px;
+    border: 1px solid #dbe3ee;
+    background: #fafcff;
+    outline: none;
+    transition: 0.2s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #1B3C74;
+    box-shadow: 0 0 0 3px rgba(27, 60, 116, 0.1);
+    background: white;
+  }
+  
+  /* ================= BUTTON ================= */
+  
+  .submit-btn {
+    display: block;
+    margin: 20px auto 0;   /* هذا اللي بوسّط الزر */
+    padding: 12px 28px;    /* يخليه على قد المحتوى */
+    border: none;
+    border-radius: 12px;
+    background: #1b3c74;
+    color: white;
+    font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: fit-content;    /* مهم جداً */
+  }
+  
+  .submit-btn:hover {
+    background: #14305f;
+  }
+  .prescription-toggle-inline {
+    display: flex;
+    align-items: center;
+    height: 42px; /* نفس ارتفاع input */
+  }
+  
+  /* toggle style */
+  .prescription-toggle-inline input {
+    appearance: none;
+    width: 44px;
+    height: 24px;
+    background: #dbe3ee;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .prescription-toggle-inline input::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    left: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  
+  .prescription-toggle-inline input:checked {
+    background: #1B3C74;
+  }
+  
+  .prescription-toggle-inline input:checked::before {
+    transform: translateX(20px);
+  }
+  
+  /* ================= RESPONSIVE ================= */
+  
+  @media (max-width: 900px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .add-medicine-container {
+      margin-left: 80px;
+    }
+  }
