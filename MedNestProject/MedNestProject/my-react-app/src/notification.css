@@ -1,0 +1,142 @@
+.notifications-app {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f6f8fc 0%, #eef2f7 100%);
+  font-family: "Inter", sans-serif;
+}
+
+/* ================= MAIN ================= */
+.notifications-main {
+  margin-left: 80px;
+  width: calc(100% - 80px);
+  padding: 40px;
+}
+
+/* ================= HEADER ================= */
+.notifications-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.header-left h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f3b73;
+  margin: 0;
+}
+
+.header-left h4 {
+  font-size: 16px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* ================= BADGE ================= */
+.badge {
+  background: #ef4444;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-left: 10px;
+}
+
+/* ================= BUTTON ================= */
+.mark-all-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.mark-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= LIST ================= */
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ================= ITEM ================= */
+.notification-item {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* hover */
+.notification-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= UNREAD ================= */
+.notification-item.unread {
+  background: #f0f7ff;
+  border-left: 6px solid #2563eb;
+}
+
+/* ================= TEXT ================= */
+.notification-item h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f2d6b;
+  margin-bottom: 5px;
+}
+
+.notification-item p {
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.date {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ================= STATES ================= */
+.loading,
+.empty {
+  text-align: center;
+  padding: 80px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .notifications-main {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+    padding: 20px;
+  }
+
+  .header-left h1 {
+    font-size: 24px;
+  }
+
+  .notifications-header-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mark-all-btn {
+    width: 100%;
+  }
+}

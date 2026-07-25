@@ -1,0 +1,266 @@
+/* Prescription.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.prescription-containe {
+  margin-left: 105px; /* هذا هو العرض الصحيح للـ Sidebar */
+  padding: 30px 40px;
+  min-height: 100vh;
+  background: #f5f9ff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* حاوية الـ Upload + Result (جنب بعض) */
+.content-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* قسم الـ Upload */
+.upload-section {
+  flex: 2;
+  min-width: 300px;
+}
+
+.upload-section h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: rgb(3, 29, 113);
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+
+.upload-box {
+  border: 3px dashed #5c85ff;
+  border-radius: 25px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1e2f55;
+  background: #e6edff;
+  text-align: center;
+  font-size: 20px;
+  width: 52%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.upload-box:hover {
+  background: #dfe7fc;
+}
+
+.upload-box span {
+  color: #345dff;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.upload-btn {
+  margin-top: 30px;
+  background: #2b4c7e;
+  color: white;
+  padding: 15px 45px;
+  font-size: 20px;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background: #08377f;
+}
+
+.formats {
+  margin-top: 15px;
+  color: #666;
+  font-size: 17px;
+}
+
+.success,
+.nosuccess {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.success {
+  color: #1f5c2e;
+}
+
+.nosuccess {
+  color: #d60000;
+  font-weight: bold;
+}
+
+
+.result-section {
+
+    position: absolute;
+  right: 60px;
+  top: 170px;
+  margin-right: 100px;
+}
+
+.result-card {
+   width: 300px;
+  height: 170px;
+  
+  background: white;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+ 
+}
+
+.result-card p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 30px;
+}
+
+.order-btn {
+  margin-top: 25px;
+  width: 53%;
+  padding: 15px;
+  background: #2b4c7e;
+  color: white;
+  border-radius: 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background: #28384f;
+}
+
+/* الـ Features */
+/* الـ Features - تصميم احترافي */
+.features {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  padding: 30px 25px;
+  border-radius: 20px;
+  color: #1e2f55;
+  font-weight: 600;
+  font-size: 18px;
+  min-width: 180px;
+  flex: 1;
+  transition: all 0.3s ease;
+  cursor: default;
+  border: 1px solid rgba(92, 133, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* تأثير hover احترافي */
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(92, 133, 255, 0.2);
+  border-color: rgba(92, 133, 255, 0.3);
+}
+
+/* أيقونة الـ feature */
+.feature svg {
+  font-size: 45px;
+  color: #384476;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #345dff, #5c85ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature:hover svg {
+  transform: scale(1.1);
+}
+
+/* عنوان الـ feature */
+.feature span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e2f55;
+  letter-spacing: 0.5px;
+}
+
+/* إضافة خط سفلي أنيميشن */
+.feature::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #909fd8, #5c85ff);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.feature:hover::after {
+  width: 60%;
+}
+
+
+
+/* للشاشات الصغيرة جدًا */
+@media (max-width: 480px) {
+  .features {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .feature {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 18px 20px;
+  }
+  
+  .feature::after {
+    height: 2px;
+  }
+  
+  .feature:hover::after {
+    width: 40%;
+  }
+}
